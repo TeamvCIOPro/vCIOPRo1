@@ -80,6 +80,8 @@ namespace ServiceLayer
                     TenantCardInfo TntDt4 = new TenantCardInfo()
                     {
                         // CreditId=model.CreditId,
+                        FirstName=model.FirstName,
+                        LastName=model.LastName,
                         CardNo = model.CardNo,
                         SecurityCode = model.SecurityCode,
                         ExpiryDate = model.ExpiryDate,
