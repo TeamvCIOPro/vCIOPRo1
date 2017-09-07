@@ -36,6 +36,7 @@ namespace ServiceLayer
                     Guid UniqueTenantId = System.Guid.NewGuid();
                     User TntDtl = new User()
                     {
+                        TenantId= UniqueTenantId,
                         FirstName = model.FirstName,
                         LastName = model.LastName,
                         Password = model.Password,
@@ -49,7 +50,7 @@ namespace ServiceLayer
                     unitOfWork.Save();
                     Tenant TntDt2 = new Tenant()
                     {
-                        //EmailId = model.EmailId,
+                        TenantId = UniqueTenantId,
                         PlanId = 1,
                         CompanyName=model.CompanyName,
                         SubDomain=model.SubDomain,
@@ -64,7 +65,7 @@ namespace ServiceLayer
 
                     TenantBillingInfo TntDt3 = new TenantBillingInfo()
                     {
-                        // BillingId=model.BillingId,
+                        TenantId = UniqueTenantId,
                         BillingEmail = model.BillingEmail,
                         Phone = model.Phone,
                         Address1 = model.Address1,
@@ -79,8 +80,8 @@ namespace ServiceLayer
 
                     TenantCardInfo TntDt4 = new TenantCardInfo()
                     {
-                        // CreditId=model.CreditId,
-                        FirstName=model.FirstName,
+                        TenantId = UniqueTenantId,
+                        FirstName =model.FirstName,
                         LastName=model.LastName,
                         CardNo = model.CardNo,
                         SecurityCode = model.SecurityCode,
