@@ -70,6 +70,7 @@ namespace HomeUser.Controllers
         [Route("Register")]
         public async Task<IHttpActionResult> Register(APiRegisterViewModel model)
         {
+        var a;
             ResponseViewModel ResponseObj = new ResponseViewModel();
 
             if (!ModelState.IsValid)
